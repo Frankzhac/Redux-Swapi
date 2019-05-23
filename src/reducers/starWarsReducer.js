@@ -1,8 +1,11 @@
-import /* we need our action types here*/ "../actions";
+import { FETCHING_CHARACTERS, FETCHING_CHARACTERS_SUCCESS, FETCHING_CHARACTERS_FAILURE,} from "../actions";
 const initialState = {
-  characters: []
+  fetching: false,
+  characters: [],
+  error: null
   // Array characters, Boolean fetching, null error.
 };
+
 export const charsReducer = (state = initialState, action) => {
   switch (action.type) {
     // Fill me in with the important reducers
