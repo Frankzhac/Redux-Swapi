@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 
 import { CharacterList } from "../components";
 // import actions
+import { getCharacters } from "../actions";
 
 class CharacterListView extends React.Component {
   constructor() {
@@ -39,8 +40,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(
-  null /* mapStateToProps replaces null here */,
-  {
-    /* action creators go here */
-  }
+  mapStateToProps,
+  { getCharacters }
 )(CharacterListView);
